@@ -25,10 +25,34 @@ public class JogadorComparator implements Comparator<Jogador>{
         this.n2 = n2;
         this.n3 = n3;
     }
-   public int compare(Jogador o1, Jogador o2){
-       return 1;
-   }
-    
-    
+    @Override
+    public int compare(Jogador o1, Jogador o2) {
+        if (n1 == true) {
+            if(n2==true){
+            if (o1.numero == o2.numero) {
+                return 0;
+            }
+            if (o1.numero > o2.numero) {
+                return o1.numero - o2.numero;
+            }
+            if (o1.numero < o2.numero) {
+                return o2.numero - o1.numero;
+            }
+            }else{
+            if (o1.numero == o2.numero) {
+                return 0;
+            }
+            if (o1.numero > o2.numero) {
+                return o2.numero - o1.numero;
+            }
+            if (o1.numero < o2.numero) {
+                return o1.numero - o2.numero;
+            }
+            }
+        }
+        return 1;
+    }
+
+
     
 }

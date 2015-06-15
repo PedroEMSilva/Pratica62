@@ -27,8 +27,10 @@ public class Pratica62 {
  t2.addJogador("def",new Jogador(10, "asuashuashaus da Silva")); 
  JogadorComparator c=new JogadorComparator(false,true,true);
  List<Jogador> l1=t1.ordena(c);
-        System.out.println(l1);
-
-      
+        for(Jogador y: l1){
+            System.out.println(y);}
+        Jogador j=new Jogador (1,"atk");
+int i =  Collections.binarySearch(l1,j, c);
+       
 }
 }
